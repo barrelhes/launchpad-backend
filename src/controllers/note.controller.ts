@@ -118,7 +118,7 @@ export class NoteController extends BaseController implements INoteController {
             if (!userId) return;
 
             const noteId = req.params.id;
-            if (!noteId) {
+            if (!noteId || typeof noteId !== 'string') {
                 return next(new AppError('Note ID is required', 400));
             }
 
@@ -142,7 +142,7 @@ export class NoteController extends BaseController implements INoteController {
             if (!userId) return;
 
             const noteId = req.params.id;
-            if (!noteId) {
+            if (!noteId || typeof noteId !== 'string') {
                 return next(new AppError('Note ID is required', 400));
             }
 
@@ -166,7 +166,7 @@ export class NoteController extends BaseController implements INoteController {
             if (!userId) return;
 
             const noteId = req.params.id;
-            if (!noteId) {
+            if (!noteId || typeof noteId !== 'string') {
                 return next(new AppError('Note ID is required', 400));
             }
 
